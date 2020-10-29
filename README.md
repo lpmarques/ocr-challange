@@ -1,22 +1,29 @@
-#OCR - Optical Character Recognition
+# OCR - Optical Character Recognition
 
-Simple approach to recognize text in a image. 
+Simple application to recognize text in an image and print it to CLI. 
 The **ocr.py** script uses the pytesseract library to estimate a string approximation of the text depicted in any given image.
 
-### Parameters
+## Parameters
 #### -i, --image
-Path to the image containing the text to be recognized.
+Path to the image containing the text to be recognized;
 *Required* 
 
 #### -l, --lang
-Language that Tesseract uses to support word recognition.
-*Not required*
+Language that Tesseract uses to support word recognition;
+*Not required*;
 *Default*: None
 
 #### -d, --tessdata-dir
-Language that Tesseract uses to support word recognition.
-*Not required*
+Language that Tesseract uses to support word recognition;
+*Not required*;
 *Default*: Tesseract primary installation dataset
+
+## Example run
+### Input:
+![](input_example/my_name.jpg)
+
+### Output:
+`LUCAS PEREIRA MARQUES`
 
 ## Deploy
 
