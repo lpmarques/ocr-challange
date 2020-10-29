@@ -65,9 +65,8 @@ source ocrenv/bin/activate
 Install all the dependencies:
 
 ```
-apt-get install tesseract
+sudo apt-get install tesseract-ocr
 pip3 install pytesseract==0.3.6
-pip3 install Pillow
 ```
 
 Finally, run the script:
