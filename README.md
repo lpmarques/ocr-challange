@@ -14,9 +14,9 @@ Language that Tesseract uses to support word recognition;
 *Default*: None
 
 #### -d, --tessdata-dir
-Language that Tesseract uses to support word recognition;
+Path containing the training dataset that feeds Tesseract's neural network; You can override this to achieve better text recognition results;
 *Not required*;
-*Default*: Tesseract primary installation dataset
+*Default*: https://github.com/tesseract-ocr/tessdata
 
 ## Example run
 ### Input:
@@ -39,9 +39,9 @@ Run the container while mapping the image source to the directory where the ocr 
 docker run -ti -v IMAGE/SOURCE/PATH:/usr/image.jpg ocr
 ```
 
-By default, the ocr image will have the image path set as `/usr/image.jpg`, but you can define any other path by overriding the `OCR_ARGS` env variable.
+By default, the ocr container will have the image path set as `/usr/image.jpg`, but you can define any other path by overriding the `OCR_ARGS` env variable.
 ```
-docker run -ti -v IMAGE/SOURCE/PATH:/NONDEFAULT/CONTAINER/PATH -e OCR_ARGS="--image /NONDEFAULT/CONTAINER/PATH --lang='eng'" ocr
+docker run -ti -v IMAGE/SOURCE/PATH:/NONDEFAULT/CONTAINER/PATH -e OCR_ARGS="--image /NONDEFAULT/CONTAINER/PATH" ocr
 ```
 If you wish so, you can also define other parameter values by passing it along with `--image` in `OCR_ARGS`.
 
