@@ -28,5 +28,7 @@ def ocr(image_filename, tesseract_config):
 
 args = parse_arguments()
 config = args_to_tess_config(args)
+text = ocr(args["image"], config)
 
-print(ocr(args["image"], config))
+with open('texto.txt', "w") as f:
+    f.write(text)
